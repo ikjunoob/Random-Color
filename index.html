@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <button>정지</button>
+    <script>
+        const bgColor = ['orange', 'brown', 'coral', 'crimson']
+        const box = document.querySelector('.box')
+        const button = document.querySelector('button')
+
+        let i = 1
+        function bgColorChange() {
+            box.style.backgroundColor = bgColor[i]
+
+            i++
+            if(i==bgColor.length){
+                i=0
+            }
+        }
+
+        const play = setInterval(bgColorChange,1000)
+        button.addEventListener('click',()=>{
+            clearInterval(play)
+        })
+    </script>
+</body>
+
+</html>
