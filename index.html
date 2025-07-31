@@ -1,44 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .box {
-            width: 100px;
-            height: 100px;
-            background-color: orange;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-    <div class="box"></div>
-    <button>정지</button>
-    <script>
-        const bgColor = ['orange', 'brown', 'coral', 'crimson']
-        const box = document.querySelector('.box')
-        const button = document.querySelector('button')
-
-        let i = 1
-        function bgColorChange() {
-            box.style.backgroundColor = bgColor[i]
-
-            i++
-            if(i==bgColor.length){
-                i=0
-            }
-        }
-
-        const play = setInterval(bgColorChange,1000)
-        button.addEventListener('click',()=>{
-            clearInterval(play)
-        })
-    </script>
+    <div id="container">
+        <h1 class="title">#000000</h1>
+        <div class="btn-wrap">
+            <button id="play">play</button>
+            <button id="stop">stop</button>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
 </body>
-
 </html>
